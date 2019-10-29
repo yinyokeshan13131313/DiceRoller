@@ -2,4 +2,6 @@
     <string name="app_name">DiceRoller</string>
     <string name="roll_label">Roll</string>
     <string name="reset_button">Reset</string>
+    <string name="count_up">Count Up</string>
+    <string name="hello_world">Hello World!</string>
 </resources>

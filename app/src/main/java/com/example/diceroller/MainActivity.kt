@@ -14,8 +14,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         val rollButton: Button = findViewById(R.id.roll_button)
         rollButton.setOnClickListener{rollDice()}
-        val resetButton: Button = findViewById(R.id.reset_button)
-        resetButton.setOnClickListener{resetDice()}
+        val countButton: Button = findViewById(R.id.count_up_button)
+        countButton.setOnClickListener{countUp()}
     }
 
     private fun rollDice(){
@@ -23,13 +23,17 @@ class MainActivity : AppCompatActivity() {
         Toast.makeText(this, "button clicked", Toast.LENGTH_SHORT).show()
         val resultText: TextView = findViewById(R.id.result_text)
         resultText.text = randomInt.toString()
-        val countUpText: TextView = findViewById(R.id.count_up_button)
-        if(resultText.text.toString().toInt() != 6 && !(resultText.text.equals("Hello World")))
-            countUpText.text = (resultText.text.toString().toInt() + 1).toString()
     }
 
-    private fun resetDice(){
+    private fun countUp(){
         val resultText: TextView = findViewById(R.id.result_text)
-        resultText.text = "0"
+        //val countUpText: TextView = findViewById(R.id.count_up_button)
+        val testInt = 1
+        if(resultText.text == "Hello World!")
+            resultText.text = "1"
+        else if(resultText.text.toString().toInt() != 6)
+            resultText.text = (resultText.text.toString().toInt() + 1).toString()
     }
+
+
 }
